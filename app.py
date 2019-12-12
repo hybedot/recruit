@@ -30,7 +30,7 @@ class Predict(Resource):
             interview_test = json_data['interview_test']
             fluency_confidence = json_data['fluency_confidence']
 
-            prediction_data = [qualification, target_met, foreign_schooled, previous_award, class_of_degree
+            prediction_data = [qualification, target_met, foreign_schooled, previous_award, class_of_degree,
                                 interview_test, fluency_confidence]
 
             prediction = np.array2string(model.predict([prediction_data]))
