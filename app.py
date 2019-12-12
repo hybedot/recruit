@@ -14,7 +14,7 @@ CORS(app)
 api = Api(app)
 
 modelfile = 'models/recuit.pkl'
-model = joblib.load(modelfile)
+model = joblib.load(open(modelfile, 'rb'))
 
 class Predict(Resource):
     def post(self):
