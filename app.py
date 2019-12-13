@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_restful import Api, Resource
 from flask_cors import CORS
 from sklearn.externals import joblib
+from catboost import CatBoostClassifier, Pool, cv
 import numpy as np
 import pickle as p
 
